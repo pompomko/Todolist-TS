@@ -36,7 +36,9 @@ function App() {
           <ul>
             {todos.map((todo) => (
               <li key={Number(todo.id)}>
-                {todo.title} - {todo.contents}
+                <h3>{todo.title}</h3>
+                <p> {todo.contents}</p>
+                <p> 완료 여부 : {todo.isDone.toString()}</p>
               </li>
             ))}
           </ul>
