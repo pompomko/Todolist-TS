@@ -13,21 +13,23 @@ function App() {
   const [todos, setTodos] = useState<Todos[]>([
     {
       id: uuid(),
-      title: "제목1",
-      contents: "내용1",
+      title: "타입 스크립트 ",
+      contents: "제네릭 연습하기 ",
       isDone: false,
     },
     {
       id: uuid(),
-      title: "제목2",
-      contents: "내용2",
+      title: "타입스크립트 과제",
+      contents: "타입스크립트에 접목해서 todolist 만들기",
       isDone: true,
     },
   ]);
 
   return (
     <div>
-      <header style={{ backgroundColor: "#ff99c8" }}>헤더입니다 </header>
+      <header>
+        <h1>Type Script TodoList </h1>
+      </header>
       <main style={{ backgroundColor: "#fcf6bd" }}>
         <div>
           <form
@@ -123,7 +125,23 @@ function App() {
                   <h3>{todo.title}</h3>
                   <p> {todo.contents}</p>
                   <p> 완료 여부 : {todo.isDone.toString()}</p>
-                  <button>완료취소</button>
+                  <button
+                    onClick={() => {
+                      const newTodos = todos.map((item) => {
+                        if (item.id === todo.id) {
+                          return {
+                            ...item,
+                            isDone: !item.isDone,
+                          };
+                        } else {
+                          return item;
+                        }
+                      });
+                      setTodos(newTodos);
+                    }}
+                  >
+                    완료취소
+                  </button>
                   <button
                     onClick={() => {
                       const deletedTodos = todos.filter((item) => {
@@ -139,7 +157,7 @@ function App() {
           </ul>
         </div>
       </main>
-      <footer style={{ backgroundColor: "#d0f4de" }}>푸터입니다</footer>
+      <footer style={{ backgroundColor: "#d0f4de" }}></footer>
     </div>
   );
 }
