@@ -42,6 +42,8 @@ function App() {
                 isDone: false,
               };
               setTodos([...todos, newTodo]);
+              setTitle("");
+              setContents("");
             }}
           >
             제목
