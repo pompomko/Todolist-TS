@@ -157,7 +157,6 @@ function App() {
           </ul>
         </div>
       </main>
-      <footer style={{ backgroundColor: "#d0f4de" }}></footer>
     </div>
   );
 }
