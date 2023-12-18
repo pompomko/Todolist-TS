@@ -104,7 +104,7 @@ function App() {
                       setTodos(deletedTodos);
                     }}
                   >
-                    삭제
+                    삭제하기
                   </button>
                 </div>
               ))}
@@ -142,7 +142,7 @@ function App() {
                       setTodos(newTodos);
                     }}
                   >
-                    완료취소
+                    취소
                   </button>
                   <button
                     onClick={() => {
@@ -152,7 +152,7 @@ function App() {
                       setTodos(deletedTodos);
                     }}
                   >
-                    삭제
+                    삭제하기
                   </button>
                 </div>
               ))}
