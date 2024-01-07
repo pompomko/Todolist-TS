@@ -110,7 +110,7 @@ function App() {
         </div>
 
         <div>
-          <h1>완료된 목록 확인중입니다</h1>
+          <h1>완료된 목록 확인중입니다 아마도요</h1>
           <ul>
             {todos
               .filter((todo) => todo.isDone === true)
