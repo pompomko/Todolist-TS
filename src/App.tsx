@@ -64,7 +64,7 @@ function App() {
           </form>
         </div>
         <div>
-          <h1>할일 목록</h1>
+          <h1>할일 목록 이거 맞나 </h1>
           <ul>
             {todos
               .filter((todo) => todo.isDone === false)
